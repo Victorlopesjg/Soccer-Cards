@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 	public GameObject deck;
-
+	public Text playerScore;
+	public Text aiScore;
 
 	private int playerPoints = 0;
 	private int aiPoints = 0;
@@ -16,6 +18,7 @@ public class GameController : MonoBehaviour {
 
 	private int isAtackTurn;
 	// Use this for initialization
+
 	void Start () {
 		StartCoroutine (startDecksCoroutine());
 		isAtackTurn = 1;
@@ -58,6 +61,19 @@ public class GameController : MonoBehaviour {
 		}
 		Debug.Log (aiPoints);
 		isAtackTurn = isAtackTurn * -1;
+
+		if (playerDeck.PCardsInHand ().Count == 0)
+			EndGame ();
+
+	}
+
+	void EndGame(){
+		if (playerPoints > aiPoints) {
+		
+		}else{
+			
+		}
+			//playerlooses
 	}
 
     GameObject GetClickedGameObject()
@@ -87,6 +103,8 @@ public class GameController : MonoBehaviour {
                         SelectCard(i);
             }
         }
+		playerScore.text = playerPoints.ToString();
+		aiScore.text = aiPoints.ToString();
 	}
 
 
