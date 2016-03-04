@@ -4,30 +4,42 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 	public GameObject deck;
 
-	private GameObject playerDeck;
-	private GameObject aiDeck;
+	private GameObject player;
+	private GameObject ai;
+
+	private Deck playerDeck;
+	private Deck aiDeck;
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (startDecksCoroutine());
 	}
 
 	IEnumerator startDecksCoroutine(){
-		StartDecks ();
+		StartDeckObjects ();
 		yield return new WaitForSeconds(1);
-		LogDecks ();
+		SetDecks ();
+		SelectCard (0);
 	}
 
-	void StartDecks(){
-		playerDeck = Instantiate (deck);
+	void StartDeckObjects(){
+		player = Instantiate (deck);
+		ai = Instantiate (deck);
 	}
 
-	void LogDecks(){
-		Deck playerDeckScript = (Deck) playerDeck.GetComponent (typeof(Deck));
-		Debug.Log (playerDeckScript.CardsInHand()[0]);
+	void SetDecks(){
+		playerDeck = (Deck) player.GetComponent (typeof(Deck));
+		aiDeck = (Deck) ai.GetComponent (typeof(Deck));
+		playerDeck.PSetPlayerHand ();
+		aiDeck.PSetAiHand ();
 	}
-	
+
+	void SelectCard(int i){
+		playerDeck.PSelectCard (i);
+	}
+
 	// Update is called once per frame
 	void Update () {
-	
 	}
+
+
 }
