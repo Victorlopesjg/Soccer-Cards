@@ -1,0 +1,34 @@
+# =============== #
+# Unity generated #
+# =============== #
+Soccer Cards/[Tt]emp/
+Soccer Cards/[Oo]bj/
+Soccer Cards/[Bb]uild
+Soccer Cards/[Ll]ibrary/
+Soccer Cards/sysinfo.txt
+Soccer Cards/*.stackdump
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
