@@ -70,11 +70,10 @@ public class GameController : MonoBehaviour {
 
 	void EndGame(){
 		if (playerPoints > aiPoints) {
-		
+			Application.LoadLevel ("Ganhou");
 		}else{
-			
+			Application.LoadLevel ("Perdeu");
 		}
-			//playerlooses
 	}
 
     GameObject GetClickedGameObject()
