@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8f08f0472ea4a2a499a3261de9a24647
+timeCreated: 1457050880
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - playerDeck: {fileID: 133990, guid: 9aaaf6608a8665745be0fc491238bebf, type: 2}
+  - aiDeck: {fileID: 133990, guid: 9aaaf6608a8665745be0fc491238bebf, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
