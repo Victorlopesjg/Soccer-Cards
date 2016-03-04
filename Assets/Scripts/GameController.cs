@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
 	public GameObject deck;
 	public Text playerScore;
 	public Text aiScore;
+	public Text turn;
 
 	private int playerPoints = 0;
 	private int aiPoints = 0;
@@ -109,6 +110,11 @@ public class GameController : MonoBehaviour {
         }
 		playerScore.text = playerPoints.ToString();
 		aiScore.text = aiPoints.ToString();
+		if (isAtackTurn == 1)
+			turn.text = "Atack";
+		else {
+			turn.text = "Defend";
+		}
 	}
 
 
