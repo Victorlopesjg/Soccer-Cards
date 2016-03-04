@@ -31,18 +31,19 @@ public class Deck : MonoBehaviour {
 
 	void SetPlayerHand(){
 		List<GameObject> cards = CardsInHand ();
+		for (int i = 0; i < deck.Count; i++) {
+			deck[i].gameObject.GetComponent<Renderer>().enabled = false;
+		}
 		for (int i = 0; i < cards.Count; i++) {
 			Transform cardTransform = cards [i].gameObject.transform;
-			cardTransform.position = new Vector3 (playerCardsPositions[i], -3.94F, 0F);	
+			cards[i].gameObject.GetComponent<Renderer>().enabled = true;
+			cardTransform.position = new Vector3 (playerCardsPositions[i], -3.94F, 0F);
 		}
 	}
 
 	void SetAiHand(){
-		List<GameObject> cards = CardsInHand ();
-		for (int i = 0; i < cards.Count; i++) {
-			cards [i].gameObject.transform.position = new Vector3 (5, 5, -1);
-			cards [i].gameObject.transform.Rotate (new Vector3 (0,90,0));
-
+		for (int i = 0; i < deck.Count; i++) {
+			deck[i].gameObject.GetComponent<Renderer>().enabled = false;
 		}
 	}
 
@@ -64,7 +65,7 @@ public class Deck : MonoBehaviour {
 			SetPlayerHand ();
 		} else {
 			selectedCard.transform.position = new Vector3 (1, -1, 0);
-			selectedCard.transform.Rotate (new Vector3 (0,-90,0));
+			selectedCard.gameObject.GetComponent<Renderer>().enabled = true;
 		}
 		Debug.Log ("Selected Card", selectedCard.gameObject);
 	}
