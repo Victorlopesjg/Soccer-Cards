@@ -93,6 +93,10 @@ public class GameController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+		if(Input.GetKeyDown(KeyCode.Space)){
+			Application.LoadLevel ("Menu");
+		}
+
 		GameObject clickedCard = null;
 		if (Input.GetMouseButtonDown (0)) {
             clickedCard = GetClickedGameObject();
