@@ -1,12 +1,12 @@
 # =============== #
 # Unity generated #
 # =============== #
-Soccer Cards/[Tt]emp/
-Soccer Cards/[Oo]bj/
-Soccer Cards/[Bb]uild
-Soccer Cards/[Ll]ibrary/
-Soccer Cards/sysinfo.txt
-Soccer Cards/*.stackdump
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Ll]ibrary/
+sysinfo.txt
+*.stackdump
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
